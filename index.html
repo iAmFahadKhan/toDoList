@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ToDoList App</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,700,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <h1 class="title">Stuff I need to do</h1>
+            <!-- Dark mode toggle -->
+            <div class="dark-mode-toggle">
+                <input type="checkbox" class="checkbox new" id="checkbox">
+                <label for="checkbox" class="checkbox-label">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                    <span class="ball"></span>
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="all-tasks">
+        <h2 class="task-list-title">My lists</h2>
+        <ul class="task-list" data-lists>
+            
+        </ul>
+
+        <form data-new-list-form>
+            <input type="text" class="new list" placeholder="Add here..." aria-label="new list name" data-new-list-input>
+            <button type="submit" class="btn create" aria-label="create new list">+</button>
+        </form>
+    </div>
+
+    <div class="todo-list" data-list-display-container>
+        <div class="todo-header">
+            <h2 class="list-title" data-list-title>work</h2>
+            <p class="task-count" data-list-count>3 tasks remaining</p>
+        </div>
+
+        <div class="todo-body">
+            <div class="tasks" data-tasks>
+                <!-- Tasks will be dynamically added here -->
+            </div>
+
+            <div class="new-task-creator">
+                <form data-new-task-form>
+                    <input type="text" class="new task" placeholder="new task name" aria-label="new task name" data-new-task-input>
+                    <button type="submit" class="btn create" aria-label="create new task">+</button>
+                </form>
+            </div>
+
+            <div class="delete-stuff">
+                <button class="btn delete" data-clear-complete-tasks-button>Clear completed tasks</button>
+                <button class="btn delete" data-delete-list-button>Delete list</button>
+            </div>
+        </div>
+    </div>
+    <div id="copyright">Developed by <a href="https://github.com/jsNoobSaiBot"><i class="fa-brands fa-github"></i>jsNoobSaiBot</a></div>
+
+</body>
+</html>
